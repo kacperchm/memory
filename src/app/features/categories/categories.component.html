@@ -1,8 +1,15 @@
 <section>
   <div class="container">
-    <app-category-card [categoryName]="'Nowa kategoria'"></app-category-card>
-    <input type="text" class="input margin" placeholder="Nazwa kategorii">
-    <button class="btn margin">
+    <app-category-card
+      *ngFor="let category of categories"
+      [categoryName]="category.name"></app-category-card>
+    <input
+      (keydown.enter)="addComponent()"
+      type="text"
+      class="input margin"
+      placeholder="Nazwa kategorii"
+      [(ngModel)]="categoryName" />
+    <button class="btn margin" (click)="addComponent()">
       <fa-icon [icon]="plusIcon"></fa-icon>
     </button>
   </div>

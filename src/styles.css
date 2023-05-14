@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 100;
   src: local("Roboto Thin"), local("Roboto-Thin"),
-  url(./assets/webfonts/Roboto-Thin.ttf) format("truetype");
+    url(./assets/webfonts/Roboto-Thin.ttf) format("truetype");
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-style: normal;
   font-weight: 200;
   src: local("Roboto Light"), local("Roboto-Light"),
-  url(./assets/webfonts/Roboto-Light.ttf) format("truetype");
+    url(./assets/webfonts/Roboto-Light.ttf) format("truetype");
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   font-style: normal;
   font-weight: 300;
   src: local("Roboto Regular"), local("Roboto-Regular"),
-  url(./assets/webfonts/Roboto-Regular.ttf) format("truetype");
+    url(./assets/webfonts/Roboto-Regular.ttf) format("truetype");
 }
 
 @font-face {
@@ -27,7 +27,7 @@
   font-style: normal;
   font-weight: 400;
   src: local("Roboto Bold"), local("Roboto-Bold"),
-  url(./assets/webfonts/Roboto-Bold.ttf) format("truetype");
+    url(./assets/webfonts/Roboto-Bold.ttf) format("truetype");
 }
 
 :root {
@@ -116,7 +116,7 @@ section {
 }
 .card {
   padding: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
 }
 
