@@ -2,14 +2,15 @@
   <div class="container">
     <app-category-card
       *ngFor="let category of categories"
-      [categoryName]="category.name"></app-category-card>
+      [categoryName]="category.name"
+      (removedClicked)="removeCategory(category)"></app-category-card>
     <input
-      (keydown.enter)="addComponent()"
+      (keydown.enter)="addCategory()"
       type="text"
       class="input margin"
       placeholder="Nazwa kategorii"
       [(ngModel)]="categoryName" />
-    <button class="btn margin" (click)="addComponent()">
+    <button class="btn margin" (click)="addCategory()">
       <fa-icon [icon]="plusIcon"></fa-icon>
     </button>
   </div>

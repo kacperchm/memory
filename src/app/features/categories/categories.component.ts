@@ -17,8 +17,12 @@ export class CategoriesComponent {
   categories: Category[] = [{ name: "Sport" }, { name: "Dom" }];
   categoryName = "";
 
-  addComponent() {
+  addCategory() {
     this.categories.push({ name: this.categoryName });
     this.categoryName = "";
+  }
+
+  removeCategory(category: Category): void {
+    this.categories.splice(this.categories.indexOf(category), 1);
   }
 }
