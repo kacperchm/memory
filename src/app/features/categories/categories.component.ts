@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import {
   faComments,
   faPlay,
@@ -6,23 +6,38 @@ import {
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 import { Category } from "../../models/category";
+import { CategoryService } from "../../services/category.service";
 
 @Component({
   selector: "app-categories",
   templateUrl: "./categories.component.html",
   styleUrls: ["./categories.component.css"],
 })
-export class CategoriesComponent {
+export class CategoriesComponent implements OnInit {
   plusIcon = faPlus;
-  categories: Category[] = [{ name: "Sport" }, { name: "Dom" }];
+  categories: Category[] = [];
   categoryName = "";
 
+  constructor(private categoryService: CategoryService) {}
+
+  ngOnInit(): void {
+    this.categoryService.getCategories().subscribe(c => (this.categories = c));
+  }
+
   addCategory() {
-    this.categories.push({ name: this.categoryName });
+    this.categoryService
+      .addCategory({ name: this.categoryName })
+      .subscribe(c => this.categories.push(c));
     this.categoryName = "";
   }
 
   removeCategory(category: Category): void {
-    this.categories.splice(this.categories.indexOf(category), 1);
+    if (category.id) {
+      this.categoryService
+        .removeCategory(category.id)
+        .subscribe(() =>
+          this.categories.splice(this.categories.indexOf(category), 1)
+        );
+    }
   }
 }
