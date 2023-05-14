@@ -3,6 +3,8 @@ import { RouterModule, Routes } from "@angular/router";
 import { CategoriesComponent } from "./features/categories/categories.component";
 import { FlashCardsComponent } from "./features/flash-cards/flash-cards.component";
 import { GamesComponent } from "./features/games/games.component";
+import {FlashCardModeComponent} from "./features/flash-card-mode/flash-card-mode.component";
+import {WriteModeComponent} from "./features/write-mode/write-mode.component";
 
 const routes: Routes = [
   { path: "", pathMatch: "full", redirectTo: "categories" },
@@ -12,6 +14,8 @@ const routes: Routes = [
     component: FlashCardsComponent,
   },
   { path: "categories/:category-id/games", component: GamesComponent },
+  { path: "categories/:category-id/games/flashcard", component: FlashCardModeComponent },
+  { path: "categories/:category-id/games/write", component: WriteModeComponent },
 ];
 
 @NgModule({

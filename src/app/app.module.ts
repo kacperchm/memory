@@ -12,6 +12,8 @@ import { FlashCardsComponent } from "./features/flash-cards/flash-cards.componen
 import { GamesComponent } from "./features/games/games.component";
 import { HttpClientModule } from "@angular/common/http";
 import { FlashCardComponent } from "./ui/flash-card/flash-card.component";
+import { FlashCardModeComponent } from './features/flash-card-mode/flash-card-mode.component';
+import { WriteModeComponent } from './features/write-mode/write-mode.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { FlashCardComponent } from "./ui/flash-card/flash-card.component";
     FlashCardsComponent,
     GamesComponent,
     FlashCardComponent,
+    FlashCardModeComponent,
+    WriteModeComponent,
   ],
   imports: [
     BrowserModule,
