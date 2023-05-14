@@ -7,8 +7,5 @@ import {faComments, faPlay, faPlus, faTrash} from "@fortawesome/free-solid-svg-i
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent {
-  trashIcon = faTrash;
-  commentsIcon = faComments;
-  playIcon = faPlay;
   plusIcon = faPlus;
 }
